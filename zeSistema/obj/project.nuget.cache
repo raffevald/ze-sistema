@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UcZGmyXtNkNTWZRxcCcn09PxK2d1Jrn4klD46q/sKxeEPbeYaUq/XM/69POedMBUoilBI1x18VVuQCtrNyECYA==",
+  "dgSpecHash": "iktDHl96YIf4tqBJ/Xp/w+zPoioutoTfdlcE2VBHU60WzI7lc6scaK1nmzES83IJHVVkIMt3STFP4qLtuapvIA==",
   "success": true,
-  "projectFilePath": "E:\\dev\\c#\\zeSistema\\zeSistema\\zeSistema.csproj",
+  "projectFilePath": "E:\\git\\zeSistema\\zeSistema\\zeSistema.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\RaffEvald\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\RaffEvald\\.nuget\\packages\\google.protobuf\\3.14.0\\google.protobuf.3.14.0.nupkg.sha512",

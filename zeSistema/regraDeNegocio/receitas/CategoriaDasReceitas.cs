@@ -19,6 +19,7 @@ namespace zeSistema.regraDeNegocio.receitas
         public CategoriaDasReceitas()
         {
             InitializeComponent();
+            ListarCategoriasList();
         }
 
         private void CategoriaDasReceitas_Load(object sender, EventArgs e)
@@ -52,6 +53,8 @@ namespace zeSistema.regraDeNegocio.receitas
                 tbDescricao.Text = "";
                 strSQL = "";
 
+                ListarCategoriasList();
+
             } else
             {
                 MessageBox.Show("Não é possivel cadastrar categoria com descrição vasia.");
@@ -75,23 +78,25 @@ namespace zeSistema.regraDeNegocio.receitas
 
         private void btListarCategoriasReceitas_Click(object sender, EventArgs e)
         {
-            string strSQL;
-            int id_user_fk;
+            /*  string strSQL;
+              int id_user_fk;
 
-            Login login = new Login();
-            ListarCategorias listarCategorias = new ListarCategorias();
-            DataTable dt = new DataTable();
+              Login login = new Login();
+              ListarCategorias listarCategorias = new ListarCategorias();
+              DataTable dt = new DataTable();
 
-            id_user_fk = Login.dbUserId;
+              id_user_fk = Login.dbUserId;
 
-            strSQL = $"SELECT categorias.id_categoria as 'Codigo', categorias.descricao as 'Descrição', categorias.dataDeInsercao 'Data de cadastro' FROM categorias WHERE categorias.id_usuario_fk = '{id_user_fk}'";
+              strSQL = $"SELECT categorias.id_categoria as 'Codigo', categorias.descricao as 'Descrição', categorias.dataDeInsercao 'Data de cadastro' FROM categorias WHERE categorias.id_usuario_fk = '{id_user_fk}'";
 
-            listarCategorias.ListagemDB(strSQL);
+              listarCategorias.ListagemDB(strSQL);
 
-            listarCategorias.ListagemDB(strSQL).Fill(dt);
-            dgvListagemDados.DataSource = dt;
+              listarCategorias.ListagemDB(strSQL).Fill(dt);
+              dgvListagemDados.DataSource = dt; */
 
-            strSQL = "";
+            // strSQL = "";
+
+            ListarCategoriasList();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -120,6 +125,8 @@ namespace zeSistema.regraDeNegocio.receitas
 
                 tbDescricao.Text = "";
                 strSQL = "";
+
+                ListarCategoriasList();
             }
             else
             {
@@ -146,11 +153,41 @@ namespace zeSistema.regraDeNegocio.receitas
 
                 tbDescricao.Text = "";
                 strSQL = "";
+
+                ListarCategoriasList();
             }
             else
             {
                 MessageBox.Show("Não é possivel deletar a categoria sem informa seu codigo.");
             }
+        }
+
+        public void ListarCategoriasList()
+        {
+            try
+            {
+                string strSQL;
+                int id_user_fk;
+
+                Login login = new Login();
+                ListarCategorias listarCategorias = new ListarCategorias();
+                DataTable dt = new DataTable();
+
+                id_user_fk = Login.dbUserId;
+
+                strSQL = $"SELECT categorias.id_categoria as 'Codigo', categorias.descricao as 'Descrição', categorias.dataDeInsercao 'Data de cadastro' FROM categorias WHERE categorias.id_usuario_fk = '{id_user_fk}'";
+
+                listarCategorias.ListagemDB(strSQL);
+
+                listarCategorias.ListagemDB(strSQL).Fill(dt);
+                dgvListagemDados.DataSource = dt;
+
+                strSQL = "";
+            } catch (Exception error)
+            {
+                MessageBox.Show("Não foi possivel completar a operação.");
+            }
+
         }
     }
 }

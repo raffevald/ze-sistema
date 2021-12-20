@@ -854,11 +854,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\dev\\c#\\zeSistema\\zeSistema\\zeSistema.csproj",
+      "projectUniqueName": "E:\\git\\zeSistema\\zeSistema\\zeSistema.csproj",
       "projectName": "zeSistema",
-      "projectPath": "E:\\dev\\c#\\zeSistema\\zeSistema\\zeSistema.csproj",
+      "projectPath": "E:\\git\\zeSistema\\zeSistema\\zeSistema.csproj",
       "packagesPath": "C:\\Users\\RaffEvald\\.nuget\\packages\\",
-      "outputPath": "E:\\dev\\c#\\zeSistema\\zeSistema\\obj\\",
+      "outputPath": "E:\\git\\zeSistema\\zeSistema\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\RaffEvald\\AppData\\Roaming\\NuGet\\NuGet.Config",
