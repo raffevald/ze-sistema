@@ -24,7 +24,7 @@ namespace zeSistema.regraDeNegocio.receitas
 
         private void CategoriaDasReceitas_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btCadastrarCategoria_Click(object sender, EventArgs e)
@@ -78,24 +78,6 @@ namespace zeSistema.regraDeNegocio.receitas
 
         private void btListarCategoriasReceitas_Click(object sender, EventArgs e)
         {
-            /*  string strSQL;
-              int id_user_fk;
-
-              Login login = new Login();
-              ListarCategorias listarCategorias = new ListarCategorias();
-              DataTable dt = new DataTable();
-
-              id_user_fk = Login.dbUserId;
-
-              strSQL = $"SELECT categorias.id_categoria as 'Codigo', categorias.descricao as 'Descrição', categorias.dataDeInsercao 'Data de cadastro' FROM categorias WHERE categorias.id_usuario_fk = '{id_user_fk}'";
-
-              listarCategorias.ListagemDB(strSQL);
-
-              listarCategorias.ListagemDB(strSQL).Fill(dt);
-              dgvListagemDados.DataSource = dt; */
-
-            // strSQL = "";
-
             ListarCategoriasList();
         }
 

@@ -47,7 +47,6 @@ namespace zeSistema
                 dbUserName = Convert.ToString(dr["nome"]);
             }
 
-
             if ((dbUser == Usuario) && (dbSenha == Senha))
             {
                 TelaPrincipal telaPrincipal = new TelaPrincipal();
