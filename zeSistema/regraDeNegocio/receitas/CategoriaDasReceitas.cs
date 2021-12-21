@@ -74,6 +74,7 @@ namespace zeSistema.regraDeNegocio.receitas
             Login login = new Login();
             this.Hide();
             login.ShowDialog();
+
         }
 
         private void btListarCategoriasReceitas_Click(object sender, EventArgs e)
