@@ -31,32 +31,38 @@ namespace zeSistema
             Usuario = tbUsuario.Text;
             Senha = tbSenha.Text;
 
-            strSQL = $"SELECT usuarios.nome_de_usuario_usua as 'username', usuarios.senha_usua as 'autentificacao',  usuarios.id_usua as 'codigo', usuarios.nome_usua as 'nome'  FROM usuarios WHERE usuarios.nome_de_usuario_usua = '{Usuario}'";
+            if (Usuario != "" && Senha != "") 
+            { 
 
-            ValidarUsuarioDB validarUser = new ValidarUsuarioDB();
+                strSQL = $"SELECT usuarios.nome_de_usuario_usua as 'username', usuarios.senha_usua as 'autentificacao',  usuarios.id_usua as 'codigo', usuarios.nome_usua as 'nome'  FROM usuarios WHERE usuarios.nome_de_usuario_usua = '{Usuario}'";
 
-            validarUser.ListagemDB(strSQL);
+                ValidarUsuarioDB validarUser = new ValidarUsuarioDB();
 
-            dr = validarUser.ListagemDB(strSQL).ExecuteReader();
+                validarUser.ListagemDB(strSQL);
 
-            while (dr.Read())
-            {
-                dbSenha = Convert.ToString(dr["autentificacao"]);
-                dbUser = Convert.ToString(dr["username"]);
-                dbUserId = Convert.ToInt16(dr["codigo"]);
-                dbUserName = Convert.ToString(dr["nome"]);
-            }
+                dr = validarUser.ListagemDB(strSQL).ExecuteReader();
 
-            if ((dbUser == Usuario) && (dbSenha == Senha))
-            {
-                TelaPrincipal telaPrincipal = new TelaPrincipal();
-                this.Hide();
-                telaPrincipal.ShowDialog();
+                while (dr.Read())
+                {
+                    dbSenha = Convert.ToString(dr["autentificacao"]);
+                    dbUser = Convert.ToString(dr["username"]);
+                    dbUserId = Convert.ToInt16(dr["codigo"]);
+                    dbUserName = Convert.ToString(dr["nome"]);
+                }
+
+                if ((dbUser == Usuario) && (dbSenha == Senha))
+                {
+                    TelaPrincipal telaPrincipal = new TelaPrincipal();
+                    this.Hide();
+                    telaPrincipal.ShowDialog();
+                } else
+                {
+                    MessageBox.Show("Usuario ou senha incorreto.");
+                }
             } else
             {
-                MessageBox.Show("Usuario ou senha incorreto.");
+                MessageBox.Show("Usuario ou senha não pode ser em branco.");
             }
-
         }
 
     }
