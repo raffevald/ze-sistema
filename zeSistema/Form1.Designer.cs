@@ -62,6 +62,7 @@
             this.tbUsuario.Name = "tbUsuario";
             this.tbUsuario.Size = new System.Drawing.Size(291, 31);
             this.tbUsuario.TabIndex = 2;
+            this.tbUsuario.Text = "rafael.evald";
             // 
             // tbSenha
             // 
@@ -70,6 +71,7 @@
             this.tbSenha.Name = "tbSenha";
             this.tbSenha.Size = new System.Drawing.Size(291, 31);
             this.tbSenha.TabIndex = 3;
+            this.tbSenha.Text = "Raff-Nami-2078";
             this.tbSenha.UseSystemPasswordChar = true;
             // 
             // btLogin

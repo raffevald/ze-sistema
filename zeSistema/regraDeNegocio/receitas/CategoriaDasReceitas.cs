@@ -37,6 +37,7 @@ namespace zeSistema.regraDeNegocio.receitas
                 string dataCategoria;
                 string strSQL;
                 string dataFormatForDB = "-";
+                string tipoDeCategoria;
 
                 Login login = new Login();
                 id_user_fk = Login.dbUserId;
@@ -44,8 +45,9 @@ namespace zeSistema.regraDeNegocio.receitas
                 categoriaDescricao = tbDescricao.Text;
                 categoriaData = Convert.ToString(dtpDateTime.Value);
                 dataCategoria = $"{categoriaData[6]}{categoriaData[7]}{categoriaData[8]}{categoriaData[9]}{dataFormatForDB}{categoriaData[3]}{categoriaData[4]}{dataFormatForDB}{categoriaData[0]}{categoriaData[1]}";
+                tipoDeCategoria = cbTipoDeCategoria.Text; ;
 
-                strSQL = $"INSERT INTO categorias(descricao, dataDeInsercao, id_usuario_fk) VALUES ('{categoriaDescricao}', '{dataCategoria}', {id_user_fk})";
+                strSQL = $"INSERT INTO Categorias(descricao_cat, data_de_insercao_cat, id_usuario_fk, tipo_de_categoria_cat) VALUES ('{categoriaDescricao}', '{dataCategoria}', {id_user_fk}, '{tipoDeCategoria}');";
 
                 CadastrarCategoriasReceitas cadastrarCategoriasReceitas = new CadastrarCategoriasReceitas();
                 cadastrarCategoriasReceitas.ExQuerySQL(strSQL);
@@ -102,7 +104,7 @@ namespace zeSistema.regraDeNegocio.receitas
                 categoriaData = Convert.ToString(dtpDateTime.Value);
                 dataCategoria = $"{categoriaData[6]}{categoriaData[7]}{categoriaData[8]}{categoriaData[9]}{dataFormatForDB}{categoriaData[3]}{categoriaData[4]}{dataFormatForDB}{categoriaData[0]}{categoriaData[1]}";
 
-                strSQL = $"UPDATE categorias SET descricao = '{categoriaDescricao}', dataDeAtualizacao = '{dataCategoria}' WHERE categorias.id_categoria = {categoriaID};";
+                strSQL = $"UPDATE Categorias SET descricao_cat = '{categoriaDescricao}', data_de_atualizacao_cat = '{dataCategoria}' WHERE Categorias.id_cat = {categoriaID} and Categorias.id_usuario_fk = {Login.dbUserId};";
                 CadastrarCategoriasReceitas cadastrarCategoriasReceitas = new CadastrarCategoriasReceitas();
                 cadastrarCategoriasReceitas.ExQuerySQL(strSQL);
 
@@ -130,7 +132,7 @@ namespace zeSistema.regraDeNegocio.receitas
 
                 categoriaID = Convert.ToInt32(tbCodigo.Text);
 
-                strSQL = $"DELETE from categorias WHERE categorias.id_categoria = {categoriaID};";
+                strSQL = $"DELETE from Categorias WHERE Categorias.id_cat = {categoriaID} and Categorias.id_usuario_fk = {Login.dbUserId};";
                 CadastrarCategoriasReceitas cadastrarCategoriasReceitas = new CadastrarCategoriasReceitas();
                 cadastrarCategoriasReceitas.ExQuerySQL(strSQL);
 
@@ -158,7 +160,7 @@ namespace zeSistema.regraDeNegocio.receitas
 
                 id_user_fk = Login.dbUserId;
 
-                strSQL = $"SELECT categorias.id_categoria as 'Codigo', categorias.descricao as 'Descrição', categorias.dataDeInsercao 'Data de cadastro' FROM categorias WHERE categorias.id_usuario_fk = '{id_user_fk}'";
+                strSQL = $"SELECT categorias.id_cat as 'Codigo', categorias.descricao_cat as 'Descrição', categorias.tipo_de_categoria_cat as 'Tipo de categoria', categorias.data_de_insercao_cat 'Data de cadastro', categorias.data_de_atualizacao_cat as 'Data de atualização' FROM categorias WHERE categorias.id_usuario_fk = '{id_user_fk}'";
 
                 listarCategorias.ListagemDB(strSQL);
 

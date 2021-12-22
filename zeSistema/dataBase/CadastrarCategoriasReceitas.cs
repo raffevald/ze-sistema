@@ -20,6 +20,7 @@ namespace zeSistema.dataBase
                 connection.Open();
                 command = new MySqlCommand(strSQL, connection);
                 command.ExecuteNonQuery();
+
             } catch (Exception error)
             {
                 MessageBox.Show("Operação bloqueada.");

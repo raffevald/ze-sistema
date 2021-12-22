@@ -45,13 +45,15 @@
             this.tbDeletarCategoria = new System.Windows.Forms.Button();
             this.tbCodigo = new System.Windows.Forms.TextBox();
             this.lbCodigo = new System.Windows.Forms.Label();
+            this.cbTipoDeCategoria = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListagemDados)).BeginInit();
             this.SuspendLayout();
             // 
             // btCadastrarCategoria
             // 
             this.btCadastrarCategoria.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btCadastrarCategoria.Location = new System.Drawing.Point(857, 126);
+            this.btCadastrarCategoria.Location = new System.Drawing.Point(850, 142);
             this.btCadastrarCategoria.Name = "btCadastrarCategoria";
             this.btCadastrarCategoria.Size = new System.Drawing.Size(223, 34);
             this.btCadastrarCategoria.TabIndex = 13;
@@ -62,7 +64,7 @@
             // tbDescricao
             // 
             this.tbDescricao.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbDescricao.Location = new System.Drawing.Point(279, 78);
+            this.tbDescricao.Location = new System.Drawing.Point(272, 48);
             this.tbDescricao.Name = "tbDescricao";
             this.tbDescricao.Size = new System.Drawing.Size(291, 31);
             this.tbDescricao.TabIndex = 12;
@@ -71,7 +73,7 @@
             // 
             this.lbDescricao.AutoSize = true;
             this.lbDescricao.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbDescricao.Location = new System.Drawing.Point(185, 81);
+            this.lbDescricao.Location = new System.Drawing.Point(178, 51);
             this.lbDescricao.Name = "lbDescricao";
             this.lbDescricao.Size = new System.Drawing.Size(88, 25);
             this.lbDescricao.TabIndex = 11;
@@ -81,7 +83,7 @@
             // 
             this.lbDataDeCadastro.AutoSize = true;
             this.lbDataDeCadastro.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbDataDeCadastro.Location = new System.Drawing.Point(585, 81);
+            this.lbDataDeCadastro.Location = new System.Drawing.Point(578, 51);
             this.lbDataDeCadastro.Name = "lbDataDeCadastro";
             this.lbDataDeCadastro.Size = new System.Drawing.Size(147, 25);
             this.lbDataDeCadastro.TabIndex = 14;
@@ -113,7 +115,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvListagemDados.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvListagemDados.Enabled = false;
-            this.dgvListagemDados.Location = new System.Drawing.Point(185, 253);
+            this.dgvListagemDados.Location = new System.Drawing.Point(178, 262);
             this.dgvListagemDados.Name = "dgvListagemDados";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -126,7 +128,7 @@
             // 
             this.dtpDateTime.CustomFormat = "";
             this.dtpDateTime.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dtpDateTime.Location = new System.Drawing.Point(738, 78);
+            this.dtpDateTime.Location = new System.Drawing.Point(731, 48);
             this.dtpDateTime.Name = "dtpDateTime";
             this.dtpDateTime.Size = new System.Drawing.Size(342, 31);
             this.dtpDateTime.TabIndex = 17;
@@ -134,7 +136,7 @@
             // btTrocarDeUsuario
             // 
             this.btTrocarDeUsuario.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btTrocarDeUsuario.Location = new System.Drawing.Point(1075, 624);
+            this.btTrocarDeUsuario.Location = new System.Drawing.Point(1063, 650);
             this.btTrocarDeUsuario.Name = "btTrocarDeUsuario";
             this.btTrocarDeUsuario.Size = new System.Drawing.Size(162, 34);
             this.btTrocarDeUsuario.TabIndex = 19;
@@ -145,7 +147,7 @@
             // btVoltarTelaPrincipal
             // 
             this.btVoltarTelaPrincipal.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btVoltarTelaPrincipal.Location = new System.Drawing.Point(855, 624);
+            this.btVoltarTelaPrincipal.Location = new System.Drawing.Point(843, 650);
             this.btVoltarTelaPrincipal.Name = "btVoltarTelaPrincipal";
             this.btVoltarTelaPrincipal.Size = new System.Drawing.Size(186, 34);
             this.btVoltarTelaPrincipal.TabIndex = 18;
@@ -156,7 +158,7 @@
             // btListarCategoriasReceitas
             // 
             this.btListarCategoriasReceitas.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btListarCategoriasReceitas.Location = new System.Drawing.Point(185, 198);
+            this.btListarCategoriasReceitas.Location = new System.Drawing.Point(178, 211);
             this.btListarCategoriasReceitas.Name = "btListarCategoriasReceitas";
             this.btListarCategoriasReceitas.Size = new System.Drawing.Size(223, 34);
             this.btListarCategoriasReceitas.TabIndex = 20;
@@ -167,7 +169,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(518, 198);
+            this.button1.Location = new System.Drawing.Point(511, 211);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(223, 34);
             this.button1.TabIndex = 21;
@@ -178,7 +180,7 @@
             // tbDeletarCategoria
             // 
             this.tbDeletarCategoria.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbDeletarCategoria.Location = new System.Drawing.Point(855, 198);
+            this.tbDeletarCategoria.Location = new System.Drawing.Point(848, 211);
             this.tbDeletarCategoria.Name = "tbDeletarCategoria";
             this.tbDeletarCategoria.Size = new System.Drawing.Size(223, 34);
             this.tbDeletarCategoria.TabIndex = 22;
@@ -189,7 +191,7 @@
             // tbCodigo
             // 
             this.tbCodigo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbCodigo.Location = new System.Drawing.Point(279, 129);
+            this.tbCodigo.Location = new System.Drawing.Point(272, 99);
             this.tbCodigo.Name = "tbCodigo";
             this.tbCodigo.Size = new System.Drawing.Size(291, 31);
             this.tbCodigo.TabIndex = 24;
@@ -198,17 +200,42 @@
             // 
             this.lbCodigo.AutoSize = true;
             this.lbCodigo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbCodigo.Location = new System.Drawing.Point(185, 132);
+            this.lbCodigo.Location = new System.Drawing.Point(178, 102);
             this.lbCodigo.Name = "lbCodigo";
             this.lbCodigo.Size = new System.Drawing.Size(71, 25);
             this.lbCodigo.TabIndex = 23;
             this.lbCodigo.Text = "Codigo";
             // 
+            // cbTipoDeCategoria
+            // 
+            this.cbTipoDeCategoria.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbTipoDeCategoria.FormattingEnabled = true;
+            this.cbTipoDeCategoria.Items.AddRange(new object[] {
+            "Recebimentos",
+            "Despesas"});
+            this.cbTipoDeCategoria.Location = new System.Drawing.Point(733, 96);
+            this.cbTipoDeCategoria.Name = "cbTipoDeCategoria";
+            this.cbTipoDeCategoria.Size = new System.Drawing.Size(340, 31);
+            this.cbTipoDeCategoria.TabIndex = 25;
+            this.cbTipoDeCategoria.Text = "Selecione um intem";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(580, 99);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(150, 25);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Tipo de categoria";
+            // 
             // CategoriaDasReceitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1264, 711);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbTipoDeCategoria);
             this.Controls.Add(this.tbCodigo);
             this.Controls.Add(this.lbCodigo);
             this.Controls.Add(this.tbDeletarCategoria);
@@ -247,5 +274,7 @@
         private Button tbDeletarCategoria;
         private TextBox tbCodigo;
         private Label lbCodigo;
+        private ComboBox cbTipoDeCategoria;
+        private Label label1;
     }
 }

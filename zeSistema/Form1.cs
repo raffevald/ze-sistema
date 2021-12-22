@@ -31,7 +31,7 @@ namespace zeSistema
             Usuario = tbUsuario.Text;
             Senha = tbSenha.Text;
 
-            strSQL = $"SELECT usuarios.nomeDeUsuario as 'username', usuarios.senha as 'autentificacao',  usuarios.id_usuario as 'codigo', usuarios.nome as 'nome'  FROM usuarios WHERE usuarios.nomeDeUsuario = '{Usuario}'";
+            strSQL = $"SELECT usuarios.nome_de_usuario_usua as 'username', usuarios.senha_usua as 'autentificacao',  usuarios.id_usua as 'codigo', usuarios.nome_usua as 'nome'  FROM usuarios WHERE usuarios.nome_de_usuario_usua = '{Usuario}'";
 
             ValidarUsuarioDB validarUser = new ValidarUsuarioDB();
 
