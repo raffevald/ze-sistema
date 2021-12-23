@@ -11,6 +11,7 @@ using zeSistema.usuarioDados;
 using zeSistema.dataBase;
 using MySql.Data.MySqlClient;
 using MySql.Data;
+using zeSistema.regraDeNegocio.receitas.categorias;
 
 namespace zeSistema.regraDeNegocio.receitas
 {
@@ -45,7 +46,7 @@ namespace zeSistema.regraDeNegocio.receitas
                 categoriaDescricao = tbDescricao.Text;
                 categoriaData = Convert.ToString(dtpDateTime.Value);
                 dataCategoria = $"{categoriaData[6]}{categoriaData[7]}{categoriaData[8]}{categoriaData[9]}{dataFormatForDB}{categoriaData[3]}{categoriaData[4]}{dataFormatForDB}{categoriaData[0]}{categoriaData[1]}";
-                tipoDeCategoria = cbTipoDeCategoria.Text; ;
+                tipoDeCategoria = cbTipoDeCategoria.Text; 
 
                 strSQL = $"INSERT INTO Categorias(descricao_cat, data_de_insercao_cat, id_usuario_fk, tipo_de_categoria_cat) VALUES ('{categoriaDescricao}', '{dataCategoria}', {id_user_fk}, '{tipoDeCategoria}');";
 
@@ -86,37 +87,10 @@ namespace zeSistema.regraDeNegocio.receitas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(tbCodigo.Text != "")
-            {
-                int id_user_fk;
-                string categoriaDescricao;
-                string categoriaData;
-                string dataCategoria;
-                string strSQL;
-                string dataFormatForDB = "-";
-                int categoriaID;
+            AtualizarCategoria atualizarCategoria = new AtualizarCategoria();
+            this.Hide();
+            atualizarCategoria.ShowDialog();
 
-                Login login = new Login();
-                id_user_fk = Login.dbUserId;
-
-                categoriaDescricao = tbDescricao.Text;
-                categoriaID = Convert.ToInt32(tbCodigo.Text);
-                categoriaData = Convert.ToString(dtpDateTime.Value);
-                dataCategoria = $"{categoriaData[6]}{categoriaData[7]}{categoriaData[8]}{categoriaData[9]}{dataFormatForDB}{categoriaData[3]}{categoriaData[4]}{dataFormatForDB}{categoriaData[0]}{categoriaData[1]}";
-
-                strSQL = $"UPDATE Categorias SET descricao_cat = '{categoriaDescricao}', data_de_atualizacao_cat = '{dataCategoria}' WHERE Categorias.id_cat = {categoriaID} and Categorias.id_usuario_fk = {Login.dbUserId};";
-                CadastrarCategoriasReceitas cadastrarCategoriasReceitas = new CadastrarCategoriasReceitas();
-                cadastrarCategoriasReceitas.ExQuerySQL(strSQL);
-
-                tbDescricao.Text = "";
-                strSQL = "";
-
-                ListarCategoriasList();
-            }
-            else
-            {
-                MessageBox.Show("Não é possivel atualisar a categoria sem informa seu codigo.");
-            }
         }
 
         private void button2_Click(object sender, EventArgs e)
