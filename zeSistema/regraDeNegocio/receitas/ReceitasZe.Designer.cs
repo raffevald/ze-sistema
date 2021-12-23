@@ -31,6 +31,7 @@
             this.btCategoriaReceitas = new System.Windows.Forms.Button();
             this.btVoltarTelaPrincipal = new System.Windows.Forms.Button();
             this.btTrocarDeUsuario = new System.Windows.Forms.Button();
+            this.btReceitas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btCategoriaReceitas
@@ -66,11 +67,23 @@
             this.btTrocarDeUsuario.UseVisualStyleBackColor = true;
             this.btTrocarDeUsuario.Click += new System.EventHandler(this.btTrocarDeUsuario_Click);
             // 
+            // btReceitas
+            // 
+            this.btReceitas.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btReceitas.Location = new System.Drawing.Point(53, 117);
+            this.btReceitas.Name = "btReceitas";
+            this.btReceitas.Size = new System.Drawing.Size(236, 46);
+            this.btReceitas.TabIndex = 13;
+            this.btReceitas.Text = "Receitas";
+            this.btReceitas.UseVisualStyleBackColor = true;
+            this.btReceitas.Click += new System.EventHandler(this.btReceitas_Click);
+            // 
             // ReceitasZe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.btReceitas);
             this.Controls.Add(this.btTrocarDeUsuario);
             this.Controls.Add(this.btVoltarTelaPrincipal);
             this.Controls.Add(this.btCategoriaReceitas);
@@ -86,5 +99,6 @@
         private Button btCategoriaReceitas;
         private Button btVoltarTelaPrincipal;
         private Button btTrocarDeUsuario;
+        private Button btReceitas;
     }
 }

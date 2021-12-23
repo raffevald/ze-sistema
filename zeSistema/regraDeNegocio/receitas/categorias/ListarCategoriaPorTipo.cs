@@ -34,7 +34,6 @@ namespace zeSistema.regraDeNegocio.receitas.categorias
                 Login login = new Login();
                 ListarCategorias listarCategorias = new ListarCategorias();
                 DataTable dt = new DataTable();
-                    
 
                 id_user_fk = Login.dbUserId;
 

@@ -37,5 +37,13 @@ namespace zeSistema.regraDeNegocio.receitas
             this.Hide();
             login.ShowDialog();
         }
+
+        private void btReceitas_Click(object sender, EventArgs e)
+        {
+            MostrarFornsReceias mostrarFornsReceias = new MostrarFornsReceias();
+            this.Hide();
+            mostrarFornsReceias.MostrarFornsReceitas();
+        }
+
     }
 }

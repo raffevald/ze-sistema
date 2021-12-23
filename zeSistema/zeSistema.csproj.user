@@ -17,6 +17,9 @@
     <Compile Update="regraDeNegocio\receitas\categorias\ListarCategoriaPorTipo.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="regraDeNegocio\receitas\Receitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="regraDeNegocio\receitas\ReceitasZe.cs">
       <SubType>Form</SubType>
     </Compile>
