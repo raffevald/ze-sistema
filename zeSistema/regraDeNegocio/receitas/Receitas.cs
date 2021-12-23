@@ -58,5 +58,5 @@ namespace zeSistema.regraDeNegocio.receitas
             this.Hide();
             mostrarFornsReceias.VoltarFornsReceitasZe();
         }
-    }
+    }s
 }
