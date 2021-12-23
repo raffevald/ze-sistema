@@ -58,3 +58,5 @@ E:\git\zeSistema\zeSistema\obj\Debug\net6.0-windows\zeSistema.dll
 E:\git\zeSistema\zeSistema\obj\Debug\net6.0-windows\ref\zeSistema.dll
 E:\git\zeSistema\zeSistema\obj\Debug\net6.0-windows\zeSistema.pdb
 E:\git\zeSistema\zeSistema\obj\Debug\net6.0-windows\zeSistema.genruntimeconfig.cache
+E:\git\zeSistema\zeSistema\obj\Debug\net6.0-windows\zeSistema.regraDeNegocio.receitas.categorias.ExcluirCategoria.resources
+E:\git\zeSistema\zeSistema\obj\Debug\net6.0-windows\zeSistema.regraDeNegocio.receitas.categorias.ListarCategoriaPorTipo.resources

@@ -83,6 +83,11 @@ namespace zeSistema.regraDeNegocio.receitas
         private void btListarCategoriasReceitas_Click(object sender, EventArgs e)
         {
             ListarCategoriasList();
+
+            ListarCategoriaPorTipo listarCategoriaPorTipo = new ListarCategoriaPorTipo();
+            this.Hide();
+            listarCategoriaPorTipo.ShowDialog();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -95,30 +100,9 @@ namespace zeSistema.regraDeNegocio.receitas
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (tbCodigo.Text != "")
-            {
-                int id_user_fk;
-                string strSQL;
-                int categoriaID;
-
-                Login login = new Login();
-                id_user_fk = Login.dbUserId;
-
-                categoriaID = Convert.ToInt32(tbCodigo.Text);
-
-                strSQL = $"DELETE from Categorias WHERE Categorias.id_cat = {categoriaID} and Categorias.id_usuario_fk = {Login.dbUserId};";
-                CadastrarCategoriasReceitas cadastrarCategoriasReceitas = new CadastrarCategoriasReceitas();
-                cadastrarCategoriasReceitas.ExQuerySQL(strSQL);
-
-                tbDescricao.Text = "";
-                strSQL = "";
-
-                ListarCategoriasList();
-            }
-            else
-            {
-                MessageBox.Show("Não é possivel deletar a categoria sem informa seu codigo.");
-            }
+            ExcluirCategoria excluirCategoria = new ExcluirCategoria();
+            this.Hide();
+            excluirCategoria.ShowDialog();
         }
 
         public void ListarCategoriasList()

@@ -75,7 +75,7 @@
             this.Controls.Add(this.btVoltarTelaPrincipal);
             this.Controls.Add(this.btCategoriaReceitas);
             this.Name = "ReceitasZe";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ReceitasZe";
             this.ResumeLayout(false);
 

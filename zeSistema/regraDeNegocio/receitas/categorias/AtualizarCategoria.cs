@@ -50,6 +50,10 @@ namespace zeSistema.regraDeNegocio.receitas.categorias
                     tbDescricao.Text = "";
                     strSQL = "";
 
+                    CategoriaDasReceitas categoriaDasReceitas = new CategoriaDasReceitas();
+                    this.Hide();
+                    categoriaDasReceitas.ShowDialog();
+
                 } else
                 {
                     if (tbDescricao.Text != "" & cbTipoDeCategoria.Text == "")
@@ -76,6 +80,10 @@ namespace zeSistema.regraDeNegocio.receitas.categorias
 
                         tbDescricao.Text = "";
                         strSQL = "";
+
+                        CategoriaDasReceitas categoriaDasReceitas = new CategoriaDasReceitas();
+                        this.Hide();
+                        categoriaDasReceitas.ShowDialog();
                     } else
                     {
                         if(cbTipoDeCategoria.Text != "" & tbDescricao.Text == "")
@@ -102,6 +110,10 @@ namespace zeSistema.regraDeNegocio.receitas.categorias
 
                             tbDescricao.Text = "";
                             strSQL = "";
+
+                            CategoriaDasReceitas categoriaDasReceitas = new CategoriaDasReceitas();
+                            this.Hide();
+                            categoriaDasReceitas.ShowDialog();
                         }
                     }
                 }
@@ -112,9 +124,6 @@ namespace zeSistema.regraDeNegocio.receitas.categorias
                 MessageBox.Show("Não é possivel atualisar a categoria sem informa seu codigo.");
             }
 
-            CategoriaDasReceitas categoriaDasReceitas = new CategoriaDasReceitas();
-            this.Hide();
-            categoriaDasReceitas.ShowDialog();
         }
 
         public void ListarCategoriasList()
@@ -151,6 +160,21 @@ namespace zeSistema.regraDeNegocio.receitas.categorias
             CategoriaDasReceitas categoriaDasReceitas = new CategoriaDasReceitas();
             this.Hide();
             categoriaDasReceitas.ShowDialog();
+        }
+
+        private void dgvListagemDados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void cbTipoDeCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

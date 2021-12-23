@@ -72,7 +72,7 @@
             this.Controls.Add(this.tbNome);
             this.Controls.Add(this.btReceitas);
             this.Name = "TelaPrincipal";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TelaPrincipal";
             this.Load += new System.EventHandler(this.TelaPrincipal_Load);
             this.ResumeLayout(false);

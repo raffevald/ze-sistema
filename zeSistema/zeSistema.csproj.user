@@ -11,6 +11,12 @@
     <Compile Update="regraDeNegocio\receitas\categorias\AtualizarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="regraDeNegocio\receitas\categorias\ExcluirCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="regraDeNegocio\receitas\categorias\ListarCategoriaPorTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="regraDeNegocio\receitas\ReceitasZe.cs">
       <SubType>Form</SubType>
     </Compile>

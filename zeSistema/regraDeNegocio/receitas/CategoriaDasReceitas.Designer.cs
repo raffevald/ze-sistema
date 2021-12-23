@@ -43,8 +43,6 @@
             this.btListarCategoriasReceitas = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tbDeletarCategoria = new System.Windows.Forms.Button();
-            this.tbCodigo = new System.Windows.Forms.TextBox();
-            this.lbCodigo = new System.Windows.Forms.Label();
             this.cbTipoDeCategoria = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListagemDados)).BeginInit();
@@ -115,7 +113,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvListagemDados.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvListagemDados.Enabled = false;
-            this.dgvListagemDados.Location = new System.Drawing.Point(178, 262);
+            this.dgvListagemDados.Location = new System.Drawing.Point(178, 276);
             this.dgvListagemDados.Name = "dgvListagemDados";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -158,7 +156,7 @@
             // btListarCategoriasReceitas
             // 
             this.btListarCategoriasReceitas.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btListarCategoriasReceitas.Location = new System.Drawing.Point(178, 211);
+            this.btListarCategoriasReceitas.Location = new System.Drawing.Point(178, 225);
             this.btListarCategoriasReceitas.Name = "btListarCategoriasReceitas";
             this.btListarCategoriasReceitas.Size = new System.Drawing.Size(223, 34);
             this.btListarCategoriasReceitas.TabIndex = 20;
@@ -169,7 +167,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(511, 211);
+            this.button1.Location = new System.Drawing.Point(511, 225);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(223, 34);
             this.button1.TabIndex = 21;
@@ -180,31 +178,13 @@
             // tbDeletarCategoria
             // 
             this.tbDeletarCategoria.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbDeletarCategoria.Location = new System.Drawing.Point(848, 211);
+            this.tbDeletarCategoria.Location = new System.Drawing.Point(848, 225);
             this.tbDeletarCategoria.Name = "tbDeletarCategoria";
             this.tbDeletarCategoria.Size = new System.Drawing.Size(223, 34);
             this.tbDeletarCategoria.TabIndex = 22;
             this.tbDeletarCategoria.Text = "Excluir categoria";
             this.tbDeletarCategoria.UseVisualStyleBackColor = true;
             this.tbDeletarCategoria.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // tbCodigo
-            // 
-            this.tbCodigo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbCodigo.Location = new System.Drawing.Point(272, 99);
-            this.tbCodigo.Name = "tbCodigo";
-            this.tbCodigo.Size = new System.Drawing.Size(291, 31);
-            this.tbCodigo.TabIndex = 24;
-            // 
-            // lbCodigo
-            // 
-            this.lbCodigo.AutoSize = true;
-            this.lbCodigo.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbCodigo.Location = new System.Drawing.Point(178, 102);
-            this.lbCodigo.Name = "lbCodigo";
-            this.lbCodigo.Size = new System.Drawing.Size(71, 25);
-            this.lbCodigo.TabIndex = 23;
-            this.lbCodigo.Text = "Codigo";
             // 
             // cbTipoDeCategoria
             // 
@@ -213,9 +193,9 @@
             this.cbTipoDeCategoria.Items.AddRange(new object[] {
             "Recebimentos",
             "Despesas"});
-            this.cbTipoDeCategoria.Location = new System.Drawing.Point(733, 96);
+            this.cbTipoDeCategoria.Location = new System.Drawing.Point(347, 96);
             this.cbTipoDeCategoria.Name = "cbTipoDeCategoria";
-            this.cbTipoDeCategoria.Size = new System.Drawing.Size(340, 31);
+            this.cbTipoDeCategoria.Size = new System.Drawing.Size(724, 31);
             this.cbTipoDeCategoria.TabIndex = 25;
             this.cbTipoDeCategoria.Text = "Selecione um intem";
             // 
@@ -223,7 +203,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(580, 99);
+            this.label1.Location = new System.Drawing.Point(178, 102);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(150, 25);
             this.label1.TabIndex = 26;
@@ -236,8 +216,6 @@
             this.ClientSize = new System.Drawing.Size(1264, 711);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbTipoDeCategoria);
-            this.Controls.Add(this.tbCodigo);
-            this.Controls.Add(this.lbCodigo);
             this.Controls.Add(this.tbDeletarCategoria);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btListarCategoriasReceitas);
@@ -250,7 +228,7 @@
             this.Controls.Add(this.tbDescricao);
             this.Controls.Add(this.lbDescricao);
             this.Name = "CategoriaDasReceitas";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "CategoriaDasReceitas";
             this.Load += new System.EventHandler(this.CategoriaDasReceitas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListagemDados)).EndInit();
@@ -272,8 +250,6 @@
         private Button btListarCategoriasReceitas;
         private Button button1;
         private Button tbDeletarCategoria;
-        private TextBox tbCodigo;
-        private Label lbCodigo;
         private ComboBox cbTipoDeCategoria;
         private Label label1;
     }
